@@ -1,7 +1,7 @@
-const client = require('./client');
+const sequelize= require('./client');
 const models = require('./models');
 
 module.exports = {
-  client,
+  sequelize,
   ...models,
 };

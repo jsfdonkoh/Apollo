@@ -1,12 +1,12 @@
 const {
-  client,
+   sequelize,
   // declare your model imports here
   // for example, User
 } = require('./');
 
 async function buildTables() {
   try {
-    client.connect();
+    sequelize.connect();
 
     // drop tables in correct order
 
@@ -29,4 +29,4 @@ async function populateInitialData() {
 buildTables()
   .then(populateInitialData)
   .catch(console.error)
-  .finally(() => client.end());
+  .finally(() => sequelize.end());
